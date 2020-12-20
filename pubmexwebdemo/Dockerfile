@@ -56,7 +56,7 @@ RUN sudo apt-get update
 RUN sudo apt-get install poppler-utils -y
 
 # Install all the project dependencies one by one.
-RUN pip install -r /requirements.txt
+RUN pip install -r /requirements.txt --use-deprecated=legacy-resolver
 
 # Specify entrypoint with command.
 CMD [ "python3", "./app/main.py" ]
